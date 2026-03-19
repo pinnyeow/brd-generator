@@ -51,7 +51,7 @@ export default function Home() {
       {/* Left panel */}
       <div className="w-[420px] flex-shrink-0 border-r border-gray-200 bg-white overflow-y-auto">
         <div className="p-6 border-b border-gray-200">
-          <h1 className="text-xl font-bold text-gray-900">AB BRD Generator</h1>
+          <h1 className="text-xl font-bold text-gray-900">ABIX BRD Generator</h1>
           <p className="text-sm text-gray-500 mt-1">
             Provide 4 inputs → get a review-ready BRD draft in minutes
           </p>

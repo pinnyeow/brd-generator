@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AB BRD Generator",
+  title: "ABIX BRD Generator",
   description: "Generate country launch BRDs powered by Claude",
 };
 
