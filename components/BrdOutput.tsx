@@ -14,7 +14,7 @@ const INPUT_CHECKLIST = [
     label: "Previous Country BRD",
     tag: "Required",
     tagColor: "bg-red-100 text-red-700",
-    description: "PDF from your last country launch — used as the baseline for carry-forward features",
+    description: "Your last country launch BRD (PDF, Markdown, or plain text) — used as the baseline for carry-forward features",
   },
   {
     label: "AB Marketplace Screenshots",
