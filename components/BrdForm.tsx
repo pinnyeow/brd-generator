@@ -111,7 +111,7 @@ export default function BrdForm({ onGenerate, isLoading }: Props) {
           </h2>
           <span className="text-xs font-medium text-white bg-red-500 px-1.5 py-0.5 rounded">Required</span>
         </div>
-        <p className="text-xs text-gray-500">Upload the BRD from your last country launch (PDF, .md, or .txt)</p>
+        <p className="text-xs text-gray-500">Upload the BRD from your last country launch (PDF, Markdown, or plain text)</p>
         <input
           name="previousBrd"
           type="file"

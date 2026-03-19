@@ -73,7 +73,7 @@ export default function BrdOutput({ output, isLoading, error, brdContext }: Prop
           <h2 className="text-lg font-semibold text-gray-700 mb-2">Your BRD will appear here</h2>
           <p className="text-sm text-gray-500 leading-relaxed mb-6">
             Fill in the inputs on the left and click <strong>Generate BRD</strong>.
-            Claude will run the available analyses and assemble a complete draft — flagging any sections that couldn't be completed.
+            The generator will run the available analyses and assemble a complete draft — flagging any sections that couldn't be completed.
           </p>
 
           <div className="text-left bg-gray-50 rounded-md p-4 space-y-3">

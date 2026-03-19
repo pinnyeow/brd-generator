@@ -261,8 +261,8 @@ export async function POST(request: NextRequest) {
 
     // Stream response
     const stream = await client.messages.stream({
-      model: "claude-sonnet-4-6",
-      max_tokens: 8096,
+      model: process.env.ANTHROPIC_MODEL || "claude-sonnet-4-6",
+      max_tokens: parseInt(process.env.ANTHROPIC_MAX_TOKENS || "8096"),
       system: systemPrompt,
       messages: [{ role: "user", content }],
     });
