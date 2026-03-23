@@ -32,7 +32,7 @@ export default function BrdForm({ onGenerate, isLoading }: Props) {
   const missingOptionals: { label: string; impact: string }[] = [];
   if (abScreenshots.length === 0) {
     missingOptionals.push({
-      label: "AB Marketplace Screenshots",
+      label: "Amazon Business (AB) Screenshots",
       impact: "Parity difference analysis will be skipped. Feature carry-forward will rely on previous BRD only.",
     });
   }
@@ -119,6 +119,7 @@ export default function BrdForm({ onGenerate, isLoading }: Props) {
           className="w-full text-sm text-gray-600 dark:text-[#8A8A8A] file:mr-3 file:py-1.5 file:px-3 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-orange-50 dark:file:bg-[rgba(255,153,0,0.1)] file:text-orange-600 dark:file:text-[#FF9900] hover:file:bg-orange-100 dark:hover:file:bg-[rgba(255,153,0,0.2)]"
         />
         {previousBrd && <p className="text-xs text-[#FF9900] truncate">📄 {previousBrd.name}</p>}
+        <p className="text-xs text-gray-400 dark:text-[#555]">No previous BRD? Use the AU launch BRD as your starting point — please reach out to the PMT team if you don&apos;t have access or don&apos;t know where to find this.</p>
         {submitAttempted && !previousBrd && (
           <p className="text-xs text-red-500 font-medium">Previous BRD is required to generate a BRD.</p>
         )}
@@ -135,7 +136,7 @@ export default function BrdForm({ onGenerate, isLoading }: Props) {
             </svg>
           </div>
           <div className="flex items-center gap-2">
-            <h2 className="text-xs font-bold text-gray-600 dark:text-[#C0C0C0] uppercase tracking-wide">2 — AB Marketplace Screenshots</h2>
+            <h2 className="text-xs font-bold text-gray-600 dark:text-[#C0C0C0] uppercase tracking-wide">2 — Amazon Business (AB) Marketplace Screenshots</h2>
             <span className="text-xs font-medium bg-gray-100 dark:bg-[rgba(255,255,255,0.06)] text-gray-500 dark:text-[#666] px-2 py-0.5 rounded">Optional</span>
           </div>
         </div>
