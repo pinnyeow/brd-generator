@@ -287,7 +287,8 @@ export async function POST(request: NextRequest) {
     });
   } catch (e) {
     console.error("BRD generation error:", e);
-    const message = e instanceof Error ? e.message : "Internal error";
-    return Response.json({ error: message }, { status: 500 });
+    const message = e instanceof Error ? e.message : String(e);
+    const stack = e instanceof Error ? e.stack : undefined;
+    return Response.json({ error: message, detail: stack }, { status: 500 });
   }
 }

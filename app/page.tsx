@@ -39,6 +39,7 @@ export default function Home() {
         try {
           const err = await response.json();
           errMsg = err.error || errMsg;
+          if (err.detail) errMsg += `\n\n${err.detail}`;
         } catch {
           // response was not JSON (e.g. Vercel HTML error page)
         }
