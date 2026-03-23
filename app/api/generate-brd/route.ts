@@ -262,7 +262,7 @@ export async function POST(request: NextRequest) {
 
     // Stream response
     const stream = await client.messages.stream({
-      model: process.env.ANTHROPIC_MODEL || "claude-sonnet-4-6",
+      model: process.env.ANTHROPIC_MODEL || "claude-3-5-sonnet-20241022",
       max_tokens: parseInt(process.env.ANTHROPIC_MAX_TOKENS || "8096"),
       system: systemPrompt,
       messages: [{ role: "user", content }],
