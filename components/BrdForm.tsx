@@ -208,13 +208,13 @@ export default function BrdForm({ onGenerate, isLoading }: Props) {
             <span className="text-xs font-medium bg-gray-100 dark:bg-[rgba(255,255,255,0.06)] text-gray-500 dark:text-[#666] px-2 py-0.5 rounded">Optional</span>
           </div>
         </div>
-        <p className="text-xs text-gray-500 dark:text-[#666]">Paste compliance and tax constraints for the new country</p>
+        <p className="text-xs text-gray-500 dark:text-[#666]">Paste compliance and tax constraints for the new country. Include VAT rates, e-invoicing requirements, and any tax team sign-off notes. If you have a TRD doc, paste the relevant sections here.</p>
         <textarea
           name="trdContent"
           rows={6}
           value={trdContent}
           onChange={(e) => setTrdContent(e.target.value)}
-          placeholder="Paste tax or compliance requirements here…"
+          placeholder="e.g. VAT rate: 20%, e-invoicing mandate: yes, indirect tax sign-off: pending…"
           className="w-full border border-gray-300 dark:border-[#3A3A3A] rounded-lg px-3 py-2 text-sm bg-white dark:bg-[#1E1E1E] text-gray-900 dark:text-[#F5F5F5] placeholder-gray-400 dark:placeholder-[#555] focus:outline-none focus:ring-2 focus:ring-[#FF9900] focus:border-transparent resize-y transition-colors"
         />
       </div>
