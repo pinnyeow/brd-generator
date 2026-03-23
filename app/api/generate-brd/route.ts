@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest } from "next/server";
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+export const runtime = "nodejs";
 
 function buildSystemPrompt(hasAbScreenshots: boolean, hasB2cScreenshots: boolean, hasTrd: boolean): string {
   const skippedSteps: string[] = [];
@@ -142,6 +142,7 @@ ${!hasAbScreenshots ? "| Parity features | PARITY_MATCH | [NOT ASSESSED] | AB sc
 
 export async function POST(request: NextRequest) {
   try {
+    const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
     const formData = await request.formData();
 
     const newCountry = formData.get("newCountry") as string;
