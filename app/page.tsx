@@ -35,8 +35,14 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        const err = await response.json();
-        throw new Error(err.error || "Failed to generate BRD");
+        let errMsg = `Server error (${response.status})`;
+        try {
+          const err = await response.json();
+          errMsg = err.error || errMsg;
+        } catch {
+          // response was not JSON (e.g. Vercel HTML error page)
+        }
+        throw new Error(errMsg);
       }
 
       const reader = response.body?.getReader();
